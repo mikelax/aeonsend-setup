@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Jade",
+    "cost": 2,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Sifter's Pearl",
+    "cost": 3,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "V'riswood Amber",
+    "cost": 3,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Diamond Cluster",
+    "cost": 4,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Searing Ruby",
+    "cost": 4,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Burning Opal",
+    "cost": 5,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Clouded Sapphire",
+    "cost": 6,
+    "type": "Gem",
+    "collection": "core",
+    "quantity": 7
+  },
+  {
+    "name": "Flexing Dagger",
+    "cost": 2,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Bottled Vortex",
+    "cost": 3,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Unstable Prism",
+    "cost": 3,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Blasting Staff",
+    "cost": 4,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Focusing Orb",
+    "cost": 4,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Mage's Talisman",
+    "cost": 5,
+    "type": "Relic",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Spectral Echo",
+    "cost": 3,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Pheonix Flame",
+    "cost": 3,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Amplify Vision",
+    "cost": 4,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Ignite",
+    "cost": 4,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Lava Tendril",
+    "cost": 4,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Essence Theft",
+    "cost": 5,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Feral Lightning",
+    "cost": 5,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Oblivion Swell",
+    "cost": 5,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Dark Fire",
+    "cost": 5,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Planar Insight",
+    "cost": 6,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Chaos Arc",
+    "cost": 6,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Wildfire Whip",
+    "cost": 6,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Consuming Void",
+    "cost": 7,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Arcane Nexus",
+    "cost": 7,
+    "type": "Spell",
+    "collection": "core",
+    "quantity": 5
+  },
+  {
+    "name": "Banishing Topaz",
+    "cost": 5,
+    "type": "Gem",
+    "collection": "depths",
+    "quantity": 7
+  },
+  {
+    "name": "Transmogrifier",
+    "cost": 4,
+    "type": "Relic",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Vim Dynamo",
+    "cost": 4,
+    "type": "Relic",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Void Bond",
+    "cost": 4,
+    "type": "Spell",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Combustion",
+    "cost": 5,
+    "type": "Spell",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Devouring Shadow",
+    "cost": 6,
+    "type": "Spell",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Disintegrating Scythe",
+    "cost": 7,
+    "type": "Spell",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Monstrous Inferno",
+    "cost": 8,
+    "type": "Spell",
+    "collection": "depths",
+    "quantity": 5
+  },
+  {
+    "name": "Leeching Agate",
+    "cost": 3,
+    "type": "Gem",
+    "collection": "nameless",
+    "quantity": 7
+  },
+  {
+    "name": "Molten Hammer",
+    "cost": 5,
+    "type": "Relic",
+    "collection": "nameless",
+    "quantity": 5
+  },
+  {
+    "name": "Temporal Helix",
+    "cost": 7,
+    "type": "Relic",
+    "collection": "nameless",
+    "quantity": 5
+  },
+  {
+    "name": "Blaze",
+    "cost": 4,
+    "type": "Spell",
+    "collection": "nameless",
+    "quantity": 5
+  },
+  {
+    "name": "Scrying Bolt",
+    "cost": 6,
+    "type": "Spell",
+    "collection": "nameless",
+    "quantity": 5
+  },
+  {
+    "name": "Sage's Brand",
+    "cost": 7,
+    "type": "Spell",
+    "collection": "nameless",
+    "quantity": 5
+  },
+  {
+    "name": "Radiance",
+    "cost": 8,
+    "type": "Spell",
+    "collection": "nameless",
+    "quantity": 5
+  }
+]

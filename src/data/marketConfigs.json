@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "Market 1",
+    "gem": 3,
+    "relic": 2,
+    "spell": 4,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "position": 3,
+        "type": "Gem",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 4,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 5,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 6,
+        "type": "Spell",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 6,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Market 2",
+    "gem": 3,
+    "relic": 2,
+    "spell": 4,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 4,
+        "max": 8
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 4,
+        "max": 8
+      },
+      {
+        "position": 3,
+        "type": "Gem",
+        "min": 4,
+        "max": 8
+      },
+      {
+        "position": 4,
+        "type": "Relic",
+        "min": 5,
+        "max": 8
+      },
+      {
+        "position": 5,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 6,
+        "type": "Spell",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 7,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Market 3",
+    "gem": 3,
+    "relic": 1,
+    "spell": 5,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 4,
+        "max": 5
+      },
+      {
+        "position": 3,
+        "type": "Gem",
+        "min": 4,
+        "max": 5
+      },
+      {
+        "position": 4,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 5,
+        "type": "Spell",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "position": 6,
+        "type": "Spell",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 6,
+        "max": 8
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 6,
+        "max": 8
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 6,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Market 4",
+    "gem": 3,
+    "relic": 3,
+    "spell": 3,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 5,
+        "max": 8
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 3,
+        "type": "Gem",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 4,
+        "type": "Relic",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "position": 5,
+        "type": "Relic",
+        "min": 5,
+        "max": 8
+      },
+      {
+        "position": 6,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 5,
+        "max": 8
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 1,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Market 5",
+    "gem": 4,
+    "relic": 1,
+    "spell": 4,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "position": 3,
+        "type": "Gem",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "position": 4,
+        "type": "Gem",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "position": 5,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 6,
+        "type": "Spell",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 6,
+        "max": 6
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 7,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Market 6",
+    "gem": 2,
+    "relic": 3,
+    "spell": 4,
+    "config": [
+      {
+        "position": 1,
+        "type": "Gem",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "position": 2,
+        "type": "Gem",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "position": 3,
+        "type": "Relic",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "position": 4,
+        "type": "Relic",
+        "min": 5,
+        "max": 8
+      },
+      {
+        "position": 5,
+        "type": "Relic",
+        "min": 1,
+        "max": 8
+      },
+      {
+        "position": 6,
+        "type": "Spell",
+        "min": 3,
+        "max": 4
+      },
+      {
+        "position": 7,
+        "type": "Spell",
+        "min": 5,
+        "max": 6
+      },
+      {
+        "position": 8,
+        "type": "Spell",
+        "min": 5,
+        "max": 6
+      },
+      {
+        "position": 9,
+        "type": "Spell",
+        "min": 7,
+        "max": 8
+      }
+    ]
+  }
+]
