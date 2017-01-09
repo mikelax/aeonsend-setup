@@ -9,6 +9,12 @@ import marketConfigs from './data/marketConfigs';
 
 class GameDisplay extends React.Component {
 
+  /**
+   * Select a group of Mages to use for the game
+   * @param {string} mageCount The number of Mages to select
+   * @param {Object[]} collections List of selected collections to pick from
+   * @returns {Object[]} Array of the selected Mages
+   */
   getMages(mageCount, collections) {
     const mageCards = _
       .chain(mageData)
@@ -23,7 +29,8 @@ class GameDisplay extends React.Component {
 
   /**
    * Function to return the JSX for displaying all selected Mages
-   * @param {array} Array of Mage Cards to display
+   * @param {Object[]} mageCards Array of Mage Cards to display
+   * @returns {Object[]} Array of MageDisplay JSX components
    */
   getMagesDisplay(mageCards) {
     const mages = [];
@@ -34,6 +41,11 @@ class GameDisplay extends React.Component {
     return mages;
   }
 
+  /**
+   * Gets the Market Config for the given ID
+   * @param {string} supplyConfigId The Market ID to get
+   * @returns {Object} The Market Config Object
+   */
   getMarketConfig(supplyConfigId) {
     // if supply is random, assign it to a random market
     const market = _.toNumber(supplyConfigId) === 0
@@ -43,7 +55,13 @@ class GameDisplay extends React.Component {
     return market;
   }
 
-  getSupplyCards(market) {
+  /**
+   * Generate a List of Supply cards based on the selected Market
+   * @param {Object} market The Market Config Object
+   * @param {Object[]} collections List of selected collections to pick from
+   * @returns {Object[]} Array of the randomly selected Cards
+   */
+  getSupplyCards(market, collections) {
     const selectedCards = [];
     let availableCards = cardData;
 
@@ -52,6 +70,7 @@ class GameDisplay extends React.Component {
 
       const card = _.chain(cardData)
         .filter((c) => {return c.type === pos.type && (c.cost >= pos.min && c.cost <= pos.max)})
+        .filter((c) => {return _.intersection([c.collection], _.map(collections, 'id')).length > 0})
         .sample()
         .value();
 
@@ -88,7 +107,7 @@ class GameDisplay extends React.Component {
 
   render() {
     const market = this.getMarketConfig(this.props.supplyConfigId);
-    const supplyCards = this.getSupplyCards(market);
+    const supplyCards = this.getSupplyCards(market, this.props.collections);
     const mages = this.getMages(this.props.mageCount, this.props.collections);
     const magesDisplay = this.getMagesDisplay(mages);
 

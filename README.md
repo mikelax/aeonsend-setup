@@ -4,9 +4,9 @@ This is a sample project to experiement and play with React and related technolo
 As a recently received my [Kickstarter backed game Aeon's End](https://www.kickstarter.com/projects/actionphasegames/aeons-end), I thought I could write a little
 web app to automate some of the initial card set up.
 
-This web app helps generate the "Supply", or initial list of cards availabe to upgrade the player deck.
-It will also randomly select Mages and a Nemesis based on the indicated number of players and
-Expansions to include.
+This web app helps generate the "Supply", or the initial list of cards availabe for purchase to
+upgrade the player deck. It will also randomly select Mages and a Nemesis based on the indicated
+number of players and Expansions to include.
 
 # What is this game?
 
@@ -20,8 +20,8 @@ abilities, powerful spells, and, most importantly of all, their collective wits.
 
 # Usage
 
-After cloning the repo run `npm start` to start a dev build
+After cloning the repo run `npm start` to start a local dev build
 
 # Technology Overview
 
-This app was bootstrapped with the [create-react-app](https://github.com/facebookincubator/create-react-app).
+This app was bootstrapped with the [create-react-app](https://github.com/facebookincubator/create-react-app) starter project.
