@@ -1,6 +1,11 @@
 import React from 'react';
 
 import _ from 'lodash';
+import Col from 'react-bootstrap/lib/Col';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Table from 'react-bootstrap/lib/Table';
+
 import CardDisplay from './CardDisplay';
 import MageDisplay from './MageDisplay';
 import mageData from './data/mages';
@@ -115,47 +120,56 @@ class GameDisplay extends React.Component {
     const totalSupplyCards = _.reduce(supplyCards, (sum, n) => { return sum + n.quantity; }, 0);
     const totalNemesisCards = this.getTotalNemesisCardCount(_.toNumber(this.props.mageCount));
 
-    // if search has not been performed yet
-    // if (!this.props.showCards) {
-    //   return null;
-    // }
-
     return (
-      <div>
-        <h2>Mages</h2>
-        Number of Mages: {this.props.mageCount}
-        {magesDisplay}
+      <Grid>
+        <Row>
+          <Col xs={6} md={6}>
+            <h2>Mages</h2>
+            Number of Mages: {this.props.mageCount}
+            {magesDisplay}
+          </Col>
+          <Col xs={6} md={6}>
+            <h2>Nemesis</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} md={12}>
+            <h2>Supply</h2>
+            Supply Config:  {market.name}
+            <Table striped bordered condensed hover>
+              <tbody>
+                <tr>
+                  <td><CardDisplay card={supplyCards[0]} /></td>
+                  <td><CardDisplay card={supplyCards[1]} /></td>
+                  <td><CardDisplay card={supplyCards[2]} /></td>
+                </tr>
+                <tr>
+                  <td><CardDisplay card={supplyCards[3]} /></td>
+                  <td><CardDisplay card={supplyCards[4]} /></td>
+                  <td><CardDisplay card={supplyCards[5]} /></td>
+                </tr>
+                <tr>
+                  <td><CardDisplay card={supplyCards[6]} /></td>
+                  <td><CardDisplay card={supplyCards[7]} /></td>
+                  <td><CardDisplay card={supplyCards[8]} /></td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
 
-        <h2>Supply</h2>
-        Supply Config:  {market.name}
-        <table>
-          <tbody>
-            <tr>
-              <td><CardDisplay card={supplyCards[0]} /></td>
-              <td><CardDisplay card={supplyCards[1]} /></td>
-              <td><CardDisplay card={supplyCards[2]} /></td>
-            </tr>
-            <tr>
-              <td><CardDisplay card={supplyCards[3]} /></td>
-              <td><CardDisplay card={supplyCards[4]} /></td>
-              <td><CardDisplay card={supplyCards[5]} /></td>
-            </tr>
-            <tr>
-              <td><CardDisplay card={supplyCards[6]} /></td>
-              <td><CardDisplay card={supplyCards[7]} /></td>
-              <td><CardDisplay card={supplyCards[8]} /></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Card Counts</h2>
-        Mage Starter Cards: {totalMageStarterCards}
-        <br />Supply Cards: {totalSupplyCards}
-        <br />Nemesis Cards: {totalNemesisCards}
-        <p>
-        Total: {totalMageStarterCards + totalSupplyCards + totalNemesisCards}
-        </p>
-      </div>
+        <Row>
+          <Col xs={6} md={6}>
+            <h2>Card Counts</h2>
+            Mage Starter Cards: {totalMageStarterCards}
+            <br />Supply Cards: {totalSupplyCards}
+            <br />Nemesis Cards: {totalNemesisCards}
+            <p>
+            Total: {totalMageStarterCards + totalSupplyCards + totalNemesisCards}
+            </p>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

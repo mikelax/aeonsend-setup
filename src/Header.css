@@ -1,5 +1,9 @@
 .Header {
   text-align: center;
+  background-color: #222;
+  height: 170px;
+  padding: 15px;
+  color: white;
 }
 
 .Header-logo {
@@ -7,8 +11,5 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 140px;
-  padding: 15px;
-  color: white;
+
 }
