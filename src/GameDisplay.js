@@ -15,7 +15,9 @@ class GameDisplay extends React.Component {
    * @param {Object[]} collections List of selected collections to pick from
    * @returns {Object[]} Array of the selected Mages
    */
-  getMages(mageCount, collections) {
+  getMages = () => {
+    const mageCount = this.props.mageCount;
+    const collections = this.props.collections;
     const mageCards = _
       .chain(mageData)
       .filter(mage => {
@@ -25,44 +27,41 @@ class GameDisplay extends React.Component {
       .value();
 
     return mageCards;
-  }
+  };
 
   /**
    * Function to return the JSX for displaying all selected Mages
-   * @param {Object[]} mageCards Array of Mage Cards to display
    * @returns {Object[]} Array of MageDisplay JSX components
    */
-  getMagesDisplay(mageCards) {
-    const mages = [];
-    for(const mage of mageCards) {
-      mages.push(<MageDisplay key={mage.name} mage={mage} />);
-    }
-
-    return mages;
-  }
+  getMagesDisplay = () => {
+    return this
+      .getMages()
+      .map(mage => <MageDisplay key={mage.name} mage={mage} />);
+  };
 
   /**
    * Gets the Market Config for the given ID
-   * @param {string} supplyConfigId The Market ID to get
    * @returns {Object} The Market Config Object
    */
-  getMarketConfig(supplyConfigId) {
+  getMarketConfig = () => {
+    const supplyConfigId = this.props.supplyConfigId;
     // if supply is random, assign it to a random market
     const market = _.toNumber(supplyConfigId) === 0
       ? _.sample(marketConfigs)
       : _.find(marketConfigs, {'id': _.toNumber(supplyConfigId)});
 
     return market;
-  }
+  };
 
   /**
    * Generate a List of Supply cards based on the selected Market
-   * @param {Object} market The Market Config Object
-   * @param {Object[]} collections List of selected collections to pick from
    * @returns {Object[]} Array of the randomly selected Cards
    */
-  getSupplyCards(market, collections) {
+  getSupplyCards = () => {
+    const market = this.getMarketConfig();
     const selectedCards = [];
+    const collections = this.props.collections;
+
     let availableCards = cardData;
 
     for(let i=1; i<10; i++) {
@@ -81,39 +80,30 @@ class GameDisplay extends React.Component {
     }
 
     return selectedCards;
-  }
+  };
 
-  getTotalNemesisCardCount(mageCount) {
-    let count = 9; // start with 9 nemesis cards
+  getTotalNemesisCardCount = () => {
+    const start = 9;
+    const additional = {
+      1: 11,
+      2: 15,
+      3: 18,
+      4: 22
+    };
+
     // TODO add param for nemesis as they may have custom cards
-    switch(mageCount) {
-      case 1:
-        count += 11
-        break;
-      case 2:
-        count += 15
-        break;
-      case 3:
-        count += 18
-        break;
-      case 4:
-        count += 22
-        break;
-      default:
-        break;
-    }
-    return count;
-  }
+    return start + additional[this.props.mageCount];
+  };
 
   render() {
-    const market = this.getMarketConfig(this.props.supplyConfigId);
-    const supplyCards = this.getSupplyCards(market, this.props.collections);
-    const mages = this.getMages(this.props.mageCount, this.props.collections);
-    const magesDisplay = this.getMagesDisplay(mages);
+    const market = this.getMarketConfig();
+    const supplyCards = this.getSupplyCards();
+    const mages = this.getMages();
+    const magesDisplay = this.getMagesDisplay();
 
-    const totalMageStarterCards = _.reduce(mages, (sum, n) => { return sum + 10}, 0);
-    const totalSupplyCards = _.reduce(supplyCards, (sum, n) => { return sum + n.quantity; }, 0);
-    const totalNemesisCards = this.getTotalNemesisCardCount(_.toNumber(this.props.mageCount));
+    const totalMageStarterCards = (mages || []).length * 10;
+    const totalSupplyCards = _.sumBy(supplyCards, card => card.quantity);
+    const totalNemesisCards = this.getTotalNemesisCardCount();
 
     // if search has not been performed yet
     // if (!this.props.showCards) {
