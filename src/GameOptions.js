@@ -3,40 +3,28 @@ import React from 'react';
 import _ from 'lodash';
 
 class CollectionCheckbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
+  handleChange = event => {
     this.props.onChange(event.target.id, event.target.checked);
-  }
+  };
+
   render() {
     return (<label><input type="checkbox" id={this.props.id} defaultChecked={this.props.checked} onChange={this.handleChange} />{this.props.label}</label>);
   }
 }
 
 class GameOptions extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleCollectionChange = this.handleCollectionChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange() {
+  handleChange = () => {
     this.props.onUserInput(this.magesInput.value, this.supplyInput.value);
-  }
+  };
 
-  handleCollectionChange(id, checked) {
+  handleCollectionChange = (id, checked) => {
     this.props.onCollectionChange(id, checked);
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = event => {
     event.preventDefault();
     this.handleChange();
-  }
+  };
 
   render() {
     return (

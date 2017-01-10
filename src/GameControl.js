@@ -7,6 +7,7 @@ import GameOptions from './GameOptions';
 class GameControl extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       mages: 2,
       supply: 1,
@@ -17,19 +18,16 @@ class GameControl extends React.Component {
         ],
       searchPerformed: false
     };
-
-    this.handleUserInput = this.handleUserInput.bind(this);
-    this.handleCollectionInput = this.handleCollectionInput.bind(this);
   }
 
-  handleUserInput(mages, supply) {
+  handleUserInput = (mages, supply) => {
     this.setState({
       mages: mages,
       supply: supply
     });
-  }
+  };
 
-  handleCollectionInput(id, checked) {
+  handleCollectionInput = (id, checked) => {
     let collections = this.state.collections;
 
     const index = _.indexOf(collections, _.find(collections, {id: id}));
@@ -42,7 +40,7 @@ class GameControl extends React.Component {
     this.setState({
       collections: collections
     });
-  }
+  };
 
   render() {
     return (
