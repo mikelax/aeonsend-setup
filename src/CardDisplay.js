@@ -1,13 +1,14 @@
 import React from 'react';
+import './CardDisplay.css';
 
 class CardDisplay extends React.Component {
   render() {
     return (
-      <div>
+      <div className="Card">
         {this.props.card.name}
         <br />{this.props.card.cost}
-        <br />{this.props.card.type}
-        <br />{this.props.card.collection}
+        <div className={this.props.card.type}>{this.props.card.type}</div>
+        {this.props.card.collection}
       </div>
     );
   }
