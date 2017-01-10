@@ -33,10 +33,6 @@ class GameControl extends React.Component {
     const index = _.indexOf(collections, _.find(collections, {id: id}));
     collections.splice(index, 1, {id: id, selected: checked});
 
-    // _.chain(collections)
-    //   .find({id: id})
-    //   .merge({selected: checked});
-
     this.setState({
       collections: collections
     });
