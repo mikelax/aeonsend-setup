@@ -1,8 +1,10 @@
 import React from 'react';
+import './GameOptions.css';
 
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
 import Col from 'react-bootstrap/lib/Col';
+import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import Form from 'react-bootstrap/lib/Form';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import Grid from 'react-bootstrap/lib/Grid';
@@ -39,7 +41,7 @@ class GameOptions extends React.Component {
           <Col xs={12} md={12}>
             <Form horizontal onSubmit={this.handleSubmit}>
               <FormGroup>
-                <Col sm={2}>
+                <Col componentClass={ControlLabel} sm={2}>
                   Number of Mages
                 </Col>
                 <Col sm={10}>
@@ -52,7 +54,7 @@ class GameOptions extends React.Component {
                 </Col>
               </FormGroup>
               <FormGroup>
-                <Col sm={2}>Collections</Col>
+                <Col componentClass={ControlLabel} sm={2}>Collections</Col>
                 <Col sm={10}>
                   <CollectionCheckbox
                     label="Core" id="core" key="core"
@@ -72,7 +74,7 @@ class GameOptions extends React.Component {
                 </Col>
               </FormGroup>
               <FormGroup>
-                <Col sm={2}>Supply</Col>
+                <Col componentClass={ControlLabel} sm={2}>Supply</Col>
                 <Col sm={10}>
                   <select value={this.props.supply} ref={(input) => this.supplyInput = input} onChange={this.handleChange}>
                     <option value="0">Random</option>

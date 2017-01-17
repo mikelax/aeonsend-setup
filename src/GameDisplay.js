@@ -8,8 +8,10 @@ import Table from 'react-bootstrap/lib/Table';
 
 import CardDisplay from './CardDisplay';
 import MageDisplay from './MageDisplay';
-import mageData from './data/mages';
+import NemesisDisplay from './NemesisDisplay';
 import cardData from './data/cards';
+import mageData from './data/mages';
+import nemesisData from './data/nemeses';
 import marketConfigs from './data/marketConfigs';
 
 class GameDisplay extends React.Component {
@@ -43,6 +45,24 @@ class GameDisplay extends React.Component {
       .getMages()
       .map(mage => <MageDisplay key={mage.name} mage={mage} />);
   };
+
+  /**
+   * Randomly select a Nemesis from the selected collections.
+   * @return {Object} The NemesisDisplay JSX for the selected Nemesis
+   */
+  getNemesisDisplay = () => {
+    const collections = this.props.collections;
+
+    const nemesis = _
+      .chain(nemesisData)
+      .filter(nemesis => {
+        return _.intersection([nemesis.collection], _.map(collections, 'id')).length > 0
+      })
+      .sample()
+      .value();
+
+      return <NemesisDisplay key={nemesis.name} nemesis={nemesis} />;
+  }
 
   /**
    * Gets the Market Config for the given ID
@@ -105,6 +125,7 @@ class GameDisplay extends React.Component {
     const supplyCards = this.getSupplyCards();
     const mages = this.getMages();
     const magesDisplay = this.getMagesDisplay();
+    const nemesisDisplay = this.getNemesisDisplay();
 
     const totalMageStarterCards = (mages || []).length * 10;
     const totalSupplyCards = _.sumBy(supplyCards, card => card.quantity);
@@ -120,6 +141,7 @@ class GameDisplay extends React.Component {
           </Col>
           <Col xs={6} md={6}>
             <h2>Nemesis</h2>
+            {nemesisDisplay}
           </Col>
         </Row>
         <Row>

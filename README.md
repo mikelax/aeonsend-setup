@@ -1,4 +1,4 @@
-# Aeon's End  Set up Wizard
+# Aeon's End  Set up Wizard [![Build Status](https://travis-ci.org/mikelax/aeonsend-setup.svg?branch=master)](https://travis-ci.org/mikelax/aeonsend-setup)
 
 This is a sample project to experiement and play with React and related technologies.
 As a recently received my [Kickstarter backed game Aeon's End](https://www.kickstarter.com/projects/actionphasegames/aeons-end), I thought I could write a little
