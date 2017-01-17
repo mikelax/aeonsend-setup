@@ -1,7 +1,7 @@
 {
   "name": "aeonsend-setup",
   "version": "0.1.0",
-  "description": "Aeon's End random game generator."
+  "description": "Aeon's End random game generator.",
   "author": "Michael Holtzman",
   "private": true,
   "devDependencies": {
